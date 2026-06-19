@@ -1,0 +1,6 @@
+{
+  "name": "Privacy King",
+  "description": "منصة أدوات خصوصية ممتازة تعمل محلياً بالكامل في متصفحك لمعالجة الصور وملفات PDF وتشفير الملفات والبيانات بأمان كامل.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
