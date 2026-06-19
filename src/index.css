@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Cairo", "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Global scrollbar style */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+html.dark ::-webkit-scrollbar-track {
+  background: #0c0d10;
+}
+html:not(.dark) ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: #2d2f36;
+  border-radius: 4px;
+}
+html:not(.dark) ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f414a;
+}
+
+/* Base Variables & Body overrides */
+:root {
+  --text-main: #0f172a; /* Slate 900 */
+}
+
+html.dark {
+  --text-main: #f1f5f9; /* Slate 100 */
+}
+
+html.dark body, html.dark main {
+  background-color: #0c0d10 !important;
+  color: var(--text-main) !important;
+  font-family: 'Cairo', 'Space Grotesk', system-ui, sans-serif;
+}
+html:not(.dark) body, html:not(.dark) main {
+  background-color: #f8f9fa !important;
+  color: var(--text-main) !important;
+  font-family: 'Cairo', 'Space Grotesk', system-ui, sans-serif;
+}
+
+/* Selection Color overrides */
+::selection {
+  background-color: rgba(37, 99, 235, 0.3) !important;
+  color: #ffffff !important;
+}
+
+/* Ensure card shadow or details are sharp pixel-perfect grid borders */
+.shadow-xs, .shadow-2xs, .shadow-md, .shadow-lg {
+  box-shadow: none !important;
+}
+
+/* Unified style overrides for inputs, select controls, ranges, and sliders in dark/light mode */
+html.dark input[type="text"], html.dark input[type="password"], html.dark input[type="number"], html.dark select, html.dark textarea {
+  background-color: #0c0d10 !important;
+  border-color: #2d2f36 !important;
+  color: #e1e1e6 !important;
+}
+html:not(.dark) input[type="text"], html:not(.dark) input[type="password"], html:not(.dark) input[type="number"], html:not(.dark) select, html:not(.dark) textarea {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #1e293b !important;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:focus, select:focus, textarea:focus {
+  border-color: #2563eb !important;
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2) !important;
+}
+
+/* Specific uploader style tweaks */
+html.dark #uploader-container {
+  background-color: #111318 !important;
+  border-color: #2d2f36 !important;
+}
+html:not(.dark) #uploader-container {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+#uploader-container:hover {
+  border-color: #2563eb !important;
+}
